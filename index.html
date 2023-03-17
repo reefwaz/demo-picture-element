@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,48 @@
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
+
 <body>
 
     <section>
         <h2>Cropped Images for Mobile Screens & Full Images for Larger Screens</h2>
         <p>The picture element offers alternative versions of an image for different screen sizes or devices.</p>
-        <p>The source element specifies multiple media resources for the picture element. The media attribute is the media query condition, if this is met then the image from the srcset attribute will load. If the media query condition isn't met, then it will load the image from the img tag. </p>
-        <p>The picture element can be used to display smaller, cropped images on a smaller mobile screen and then the full sized images on a desktop screen when space allows. Loading smaller image file sizes on mobile devices helps to save bandwidth and increase the page load times.</p>
+        <p>The source element specifies multiple media resources for the picture element. The media attribute is the
+            media query condition, if this is met then the image from the srcset attribute will load. If the media query
+            condition isn't met, then it will load the image from the img tag. </p>
+        <p>The picture element can be used to display smaller, cropped images on a smaller mobile screen and then the
+            full sized images on a desktop screen when space allows. Loading smaller image file sizes on mobile devices
+            helps to save bandwidth and increase the page load times.</p>
         <p>The picture element can also be used to offer alternative image formats for different browser support. </p>
         <hr>
-        <p>More than one source can be used inside a picture element. Add a third image with a media condition to the picture elements below.</p>
+        <p>More than one source can be used inside a picture element. Add a third image with a media condition to the
+            picture elements below.</p>
         <p></p>
 
         <!-- add picture element here -->
+
+        <!-- use picture element for swaping images with different dimentions. -->
+
+        <picture>
+            <source media="(min-width: 700px)" srcset="img/chocolate-bunnies.webp">
+            <img src="img/chocolate-bunnies-thumb.webp" alt="Three chocolate easter bunnies ">
+
+        </picture>
+
+        <picture>
+            <source media="(min-width: 700px)" srcset="img/chocolate-eggs.webp">
+            <img src="img/chocolate-eggs-thumb.webp" alt="Chocolate eggs ">
+
+        </picture>
+
+        <picture>
+            <source media="(min-width: 700px)" srcset="img/easter.webp">
+            <img src="img/easter-thumb.webp" alt="Chocolate eggs that spell easter">
+
+        </picture>
     </section>
 
-    
+
 </body>
+
 </html>
